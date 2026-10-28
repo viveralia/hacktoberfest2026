@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function Panel({ title, action, className, children }: { title?: string; action?: React.ReactNode; className?: string; children: React.ReactNode }) {
   return (
-    <section className={cn("rounded-lg border border-border bg-surface", className)}>
+    <section className={cn("glass rounded-xl", className)}>
       {title && (
         <header className="flex items-center justify-between border-b border-border px-4 py-2.5">
           <h3 className="font-display text-sm font-medium tracking-tight">{title}</h3>
@@ -22,7 +22,7 @@ export function Kpi({ label, value, unit, delta, good, data }: { label: string; 
   const d = data.map((v, i) => ({ i, v }));
   const id = `g-${label.replace(/\W/g, "")}`;
   return (
-    <div className="rounded-lg border border-border bg-surface p-4">
+    <div className="glass hover-lift rounded-xl p-4">
       <p className="text-xs text-muted-foreground">{label}</p>
       <div className="mt-1 flex items-end justify-between gap-2">
         <div>
